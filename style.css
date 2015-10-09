@@ -1,0 +1,54 @@
+#blue-box {
+	background-color: #4DD7FA;
+	float: left;
+	border: 1px solid black;
+	padding: 50px 5px 60px;
+	height: 270px;
+    margin-top: 10px;
+    margin-right: 12px;
+}
+
+#yellow-box {
+	background-color:  #FEFAC0;
+	margin: 10px 0px 1px 150px; 
+	border: 1px solid black;
+	padding: 10px;
+}
+h2 {
+	color: #785616;
+}
+
+#container {
+	background-color: #FFB4B0;
+	border: 1px solid black;
+	padding: 1%;
+}
+div > ul > li {
+	list-style-type: none;
+}
+
+li {
+	display: inline;
+	border-right: 2px solid black;
+	padding: 5px;
+}
+#everything {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+}
+
+fieldset {
+	border: 0px;
+}
+
+#filter-button{
+	text-align: center;
+}
