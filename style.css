@@ -1,33 +1,59 @@
-.rounded{
-	border-radius: 10px;
+.everything {
+	display: flex;
+	margin: 5 auto;
+	-webkit-flex-wrap: wrap;
 }
 
+#nav-bar {
+	diplay: inline;
+	flex: 5 100%;
+	width: 100px;
+	background-color: #FFB4B0;
+	border: 1px solid black;
+	padding: 1%;
+}
+
+#song-list div:nth-child(2n+0) {
+	background-color: #FFF5EE;
+}
+
+#song-list :first-of-type {
+	font-weight: bold;
+}
+
+#song-list div:nth-child(2n+1) {
+	background-color: #F5FFFA;
+}
 
 
 #blue-box {
 	background-color: #4DD7FA;
-	float: left;
 	border: 1px solid black;
 	padding: 50px 5px 60px;
-	height: 270px;
-    margin-top: 10px;
-    margin-right: 12px;
+	flex-grow: 1;
+
 }
 
 #yellow-box {
 	background-color:  #FEFAC0;
-	margin: 10px 0px 1px 150px; 
 	border: 1px solid black;
 	padding: 10px;
+	flex-grow: 10;
 }
 h2 {
 	color: #785616;
 }
 
-#container {
-	background-color: #FFB4B0;
-	border: 1px solid black;
-	padding: 1%;
+div > #song-list {
+	color: red;
+	padding-bottom: 10px;
+	border:; 1px solid black;
+}
+
+header {
+	flex: 5 100%;
+	width: 100px;
+
 }
 div > ul > li {
 	list-style-type: none;
@@ -38,18 +64,6 @@ li {
 	border-right: 2px solid black;
 	padding: 5px;
 }
-#everything {
-	width: 900px;
-	margin: 0 auto;
-}
-
-#left {
-	float: left;
-}
-
-#right {
-	float: right;
-}
 
 fieldset {
 	border: 0px;
@@ -57,4 +71,9 @@ fieldset {
 
 #filter-button{
 	text-align: center;
+}
+
+.rounded{
+	border-radius: 10px;
+	margin: 6px;
 }

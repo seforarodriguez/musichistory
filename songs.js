@@ -24,7 +24,7 @@ for (i = 0;i < songs.length; i++) {
 	newsongs = characterRemoval;	
 	console.log(newsongs);
 
-	var code = "<h1>" + newsongs + "</h1>";
+	var code = "<div>" + newsongs + "</div>";
 
  songElement.innerHTML= songElement.innerHTML + code;
 
