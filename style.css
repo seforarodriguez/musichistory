@@ -2,9 +2,21 @@
 	display: flex;
 	margin: 5 auto;
 	-webkit-flex-wrap: wrap;
+	-webkit-flex-direction: row;
+ 
 }
 
 #nav-bar {
+	display: inline;
+	flex: 5 100%;
+	background-color: #FFB4B0;
+	border: 1px solid black;
+	width: 95%;
+	padding: 1%;
+	position: fixed; 
+}
+
+#emptySpace {
 	diplay: inline;
 	flex: 5 100%;
 	width: 100px;
@@ -13,8 +25,16 @@
 	padding: 1%;
 }
 
+#song-list div {
+	font-family: Verdana;
+	padding: 4%;
+	margin: 5px;
+	border-radius: 10px;
+}
+
 #song-list div:nth-child(2n+0) {
 	background-color: #FFF5EE;
+	border: 1px solid #F5FFFA;
 }
 
 #song-list :first-of-type {
@@ -23,22 +43,28 @@
 
 #song-list div:nth-child(2n+1) {
 	background-color: #F5FFFA;
+	border: 3px solid #FFF5EE;
 }
 
+.marginTop {
+	margin-top: 5.5%;
+}
 
 #blue-box {
 	background-color: #4DD7FA;
 	border: 1px solid black;
 	padding: 50px 5px 60px;
 	flex-grow: 1;
+	width: 100px;
 
 }
 
 #yellow-box {
 	background-color:  #FEFAC0;
-	border: 1px solid black;
+	border: 3px solid black;
 	padding: 10px;
 	flex-grow: 10;
+	width: 100px;
 }
 h2 {
 	color: #785616;
@@ -75,5 +101,9 @@ fieldset {
 
 .rounded{
 	border-radius: 10px;
-	margin: 6px;
+}
+
+.bright-echosmith {
+	text-align: center;
+	font-size: 50px;
 }
