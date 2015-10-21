@@ -24,9 +24,73 @@ for (i = 0;i < songs.length; i++) {
 	newsongs = characterRemoval;	
 	console.log(newsongs);
 
-	var code = "<h1>" + newsongs + "</h1>";
+	var code = "<h4>" + newsongs + "</h4>";
 
  songElement.innerHTML= songElement.innerHTML + code;
 
+
 }
+
+var addingSong = document.getElementById("AddBox");
+var addButton = document.getElementById("AddButton");
+var blueBox = document.getElementById("blue-box"); 
+var yellowBox = document.getElementById("yellow-box");
+var returnB = document.getElementById("returnList");
+var addToListB = document.getElementById("Add");
+var addSongName = document.getElementById("songName");
+
+addButton.addEventListener("click", function(){
+	addingSong.classList.add("visible");
+	blueBox.classList.add("hidden");
+	yellowBox.classList.add("hidden");
+});
+
+returnB.addEventListener("click", function(){
+	addingSong.classList.remove("visible");
+	blueBox.classList.add("visible");
+	yellowBox.classList.add("visible");
+ });
+
+addToListB.addEventListener("click", function(add){
+	var formatAddSongName = "<h4>" + addSongName.value + "</h4>";
+	songElement.innerHTML = songElement.innerHTML + formatAddSongName;
+
+});
+
+// var homeLink = document.getElementById("link-home");
+// var homeView = document.getElementById("home-view");
+
+// homeLink.addEventListener("click", function() {
+//   homeView.classList.add("hidden");
+//   addView.classList.add("hidden");
+
+//   homeView.classList.add("visible");
+//   homeView.classList.remove("hidden");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

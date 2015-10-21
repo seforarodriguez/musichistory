@@ -14,11 +14,24 @@
 <nav>
 	<div id="container" class="rounded">
 		<a href="#">View Music</a>
+		<a href="#" id="returnList">List Music</a>
 		<a href="#">Add Music</a>
 		<a href="#">Profile</a>
 	</div>	
 </nav>
 </header>
+<section>
+	<div class="hidden" id="AddBox">
+		<input type="text" id="songName" placeholder="Enter Song Name Here">
+			<button id="Add">Add</button>
+		<input type="text" placeholder="Enter Song Artist">
+			<button value="Add">Add</button>
+		<input type="text" placeholder="Enter Song Album">
+			<button value="Add">Add</button>
+		<input type="text" placeholder="Enter Song Genre">
+			<button value="Add">Add</button>
+	</div>
+</section>
 
 <article id="blue-box" class="rounded">
 	<div>
@@ -63,7 +76,10 @@
 		</div>
 		<div id="filter-button">
 			<input type="submit" value="Filter">
+			<button value="AddSong" id="AddButton">Add New Song</button>
 		</div>
+		
+
 	</fieldset>
 </article>
 
@@ -105,6 +121,7 @@
 	</div>
 </fieldset>
 </div>
+
 
 	<script src="songs.js"></script>
 </body>
