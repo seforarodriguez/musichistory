@@ -1,3 +1,4 @@
+$(document).ready(function() {
 
 var songs = [];
 
@@ -30,32 +31,43 @@ for (i = 0;i < songs.length; i++) {
 
 
 }
+// var addingSong = $(".AddBox");
+var addButton = $(".AddButton");
+// var blueBox = $(".blue-box"); 
+// // var yellowBox = $(".yellow-box");
+// var returnB = $(".returnList");
+// var addToListB = $(".Add");
+// var addSongName = $(".songName");
 
-var addingSong = document.getElementById("AddBox");
-var addButton = document.getElementById("AddButton");
-var blueBox = document.getElementById("blue-box"); 
-var yellowBox = document.getElementById("yellow-box");
-var returnB = document.getElementById("returnList");
-var addToListB = document.getElementById("Add");
-var addSongName = document.getElementById("songName");
-
-addButton.addEventListener("click", function(){
-	addingSong.classList.add("visible");
-	blueBox.classList.add("hidden");
-	yellowBox.classList.add("hidden");
+// Button to hide and show the add music box
+$("#addMusicLink").click(function(event){
+	event.preventDefault();
+	console.log("happy")
+	$("#AddBox").show();
+	$(".blue-box").hide();
+	$(".yellow-box").hide();
+	// addingSong.classList.add("visible");
+	// blueBox.classList.add("hidden");
+	// yellowBox.classList.add("hidden");
 });
 
-returnB.addEventListener("click", function(){
-	addingSong.classList.remove("visible");
-	blueBox.classList.add("visible");
-	yellowBox.classList.add("visible");
+$("#returnList").click(function(event) {
+	event.preventDefault();
+	$("#AddBox").hide();
+	$(".blueBox").show();
+	$("yellowBox").show();
  });
 
-addToListB.addEventListener("click", function(add){
-	var formatAddSongName = "<h4>" + addSongName.value + "</h4>";
-	songElement.innerHTML = songElement.innerHTML + formatAddSongName;
-
+$(".add").click(function(event){
+	var formatforSongs = $(".songName") + "-" + $(".enterArtist") + "-" + $(".enterAlbum") + "-" + $(".enterGenre")
+	var formatAddSongName = "<h4>" + formatforSongs + "</h4>";
+	songElement.innerHTML += formatAddSongName;
 });
+
+// addToListB.addEventListener("click", function() {
+// 	var formatAddSongName = "<h4>" + addSongName.value + "</h4>";
+// 	songElement.innerHTML =+ formatAddSongName;
+// });
 
 // var homeLink = document.getElementById("link-home");
 // var homeView = document.getElementById("home-view");
@@ -68,6 +80,7 @@ addToListB.addEventListener("click", function(add){
 //   homeView.classList.remove("hidden");
 
 
+});
 
 
 

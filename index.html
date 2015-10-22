@@ -15,7 +15,7 @@
 	<div id="container" class="rounded">
 		<a href="#">View Music</a>
 		<a href="#" id="returnList">List Music</a>
-		<a href="#">Add Music</a>
+		<a href="#" id="addMusicLink">Add Music</a>
 		<a href="#">Profile</a>
 	</div>	
 </nav>
@@ -23,12 +23,12 @@
 <section>
 	<div class="hidden" id="AddBox">
 		<input type="text" id="songName" placeholder="Enter Song Name Here">
-			<button id="Add">Add</button>
-		<input type="text" placeholder="Enter Song Artist">
-			<button value="Add">Add</button>
-		<input type="text" placeholder="Enter Song Album">
-			<button value="Add">Add</button>
-		<input type="text" placeholder="Enter Song Genre">
+			<button class="add" value="Add">Add</button>
+		<input type="text" class="enterArtist" placeholder="Enter Song Artist">
+			<button class="add" value="Add">Add</button>
+		<input type="text" class="enterAlbum"placeholder="Enter Song Album">
+			<button class="add" value="Add">Add</button>
+		<input type="text" class="enterGenre" placeholder="Enter Song Genre">
 			<button value="Add">Add</button>
 	</div>
 </section>
@@ -122,7 +122,7 @@
 </fieldset>
 </div>
 
-
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="songs.js"></script>
 </body>
 </html>

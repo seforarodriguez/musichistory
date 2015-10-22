@@ -15,7 +15,13 @@ a:link{
 	border-radius: 5px;
 }
 
+section {
+	background-color: #43C6DB;
+}
 
+div>input {
+	display: block;
+}
 #blue-box {
 	background-color: #43C6DB;
 	float: left;
