@@ -7,8 +7,18 @@ a {
 	padding-right: 10px
 }
 
-a:link{
+a:link {
 	text-decoration: none;
+	font-family: Verdana;
+	color: #FFFFFF;
+}
+
+a:visited {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #000000;
 }
 
 .rounded{
@@ -85,6 +95,10 @@ fieldset {
 	text-align: center;
 }
 
+.buttonFilter {
+	text-align: center;
+}
+
 .hidden {
 	display: none;
 }
@@ -92,6 +106,22 @@ fieldset {
 .visible {
 	display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

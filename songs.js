@@ -3,16 +3,16 @@ $(document).ready(function() {
 var songs = [];
 
 
-songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+songs[songs.length] = "Legs > Z*ZTop - Eliminator";
+songs[songs.length] = "The Logical Song > Supertr@amp -  Breakfast in America";
+songs[songs.length] = "Another Brick in the Wall > Pink Floyd - The Wall";
+songs[songs.length] = "Welco(me to the Jungle > Guns & Roses - Appetite for Destruction";
+songs[songs.length] = "Ironi!c > Alanis Moris*ette - Jagged Little Pill";
 
 console.log(songs);
 
-songs.unshift("Be My Husband - Ed Sheeran");
-songs.push("Bright - Echosmith");
+songs.unshift("Be My Husband - Ed Sheeran - Don't");
+songs.push("Bright - Echosmith - Bright");
 
 console.log(songs);
 
@@ -32,7 +32,7 @@ for (i = 0;i < songs.length; i++) {
 
 }
 // var addingSong = $(".AddBox");
-var addButton = $(".AddButton");
+// var addButton = $(".AddButton");
 // var blueBox = $(".blue-box"); 
 // // var yellowBox = $(".yellow-box");
 // var returnB = $(".returnList");
@@ -44,8 +44,8 @@ $("#addMusicLink").click(function(event){
 	event.preventDefault();
 	console.log("happy")
 	$("#AddBox").show();
-	$(".blue-box").hide();
-	$(".yellow-box").hide();
+	$("#blue-box").hide();
+	$("#yellow-box").hide();
 	// addingSong.classList.add("visible");
 	// blueBox.classList.add("hidden");
 	// yellowBox.classList.add("hidden");
@@ -53,12 +53,13 @@ $("#addMusicLink").click(function(event){
 
 $("#returnList").click(function(event) {
 	event.preventDefault();
+	console.log("SAd");
 	$("#AddBox").hide();
-	$(".blueBox").show();
-	$("yellowBox").show();
+	$("#blueBox").show();
+	$("#yellowBox").show();
  });
 
-$(".add").click(function(event){
+$("#add").click(function(event){
 	var formatforSongs = $(".songName") + "-" + $(".enterArtist") + "-" + $(".enterAlbum") + "-" + $(".enterGenre")
 	var formatAddSongName = "<h4>" + formatforSongs + "</h4>";
 	songElement.innerHTML += formatAddSongName;
@@ -81,6 +82,23 @@ $(".add").click(function(event){
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
