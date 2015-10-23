@@ -1,0 +1,19 @@
+{
+  "songs": [
+    {
+      "title": "Stiches",
+      "artist": "Shawn Mendes",
+      "album": "Handwritten"
+    },
+    {
+      "title": "Marvin Gaye",
+      "artist": "Charlie Puth",
+      "album": "Charlie Puth's Album"     
+    },
+    {
+      "title": "Amiga Mia",
+      "artist": "Alejandro Sanz",
+      "album": "Amiga Mia"      
+    }
+  ]
+}

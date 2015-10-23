@@ -22,14 +22,16 @@
 </header>
 <section>
 	<div class="hidden" id="AddBox">
-		<input type="text" id="songName" placeholder="Enter Song Name Here">
-			<button class="add" value="Add">Add</button>
-		<input type="text" class="enterArtist" placeholder="Enter Song Artist">
-			<button class="add" value="Add">Add</button>
-		<input type="text" class="enterAlbum"placeholder="Enter Song Album">
-			<button class="add" value="Add">Add</button>
-		<input type="text" class="enterGenre" placeholder="Enter Song Genre">
-			<button value="Add">Add</button>
+		
+		<input type="text" class="enterName input" placeholder="Enter Song Name Here">
+			
+		<input type="text" class="enterArtist input" placeholder="Enter Song Artist">
+			
+		
+		<input type="text" class="enterAlbum input" placeholder="Enter Song Album">
+			
+		<input type="text" class="enterGenre input" placeholder="Enter Song Genre">
+			<button value="Add" class="add">Add</button>
 	</div>
 </section>
 
@@ -37,7 +39,7 @@
 	<div>
 	<label for="songlength" class="header">Song Length</label>
 	</br>
-	<input type="range" name="sonlength" min="1:00" max="4:30">
+	<input type="range" name="songlength" min="1:00" max="4:30">
 	</br>
 	<label for="artist" class="header">Artist</label>
 	</br>
@@ -76,6 +78,7 @@
 		</div>
 		<div id="filter-button">
 			<input type="submit" class="buttonFilter" value="Filter">
+			<button class="deleteAll">Delete All</button>
 		</div>
 		
 
@@ -86,37 +89,10 @@
 	<div id="content">
 		<div id="song-list">
 		
-		<!-- <h2>Let it Rain</h2>
-		<ul>
-			<li>Hillary Duff</li>
-			<li>Album name</li>
-			<li>Pop</li>
-		</ul>
-	</div>
-	<div id="content">
-		<h2>Mirrors</h2>
-		<ul>
-			<li>Justin Timberlake</li>
-			<li>22/22</li>
-			<li>Pop</li>
-		</ul>
-	</div>
-	<div id="content">
-		<h2>A life that's Good</h2>
-		<ul>
-			<li>Conrad Sisters</li>
-			<li>Nashville</li>
-			<li>Country</li>
-		</ul>
-	</div>
-	<div id="content">
-		<h2>King</h2>
-		<ul>
-			<li>Years & Years</li>
-			<li>Communion</li>
-			<li>Electronic</li>
-		</ul> -->
 		</div>
+
+		<button id="getMoreSongs">More</button>
+
 	</div>
 </fieldset>
 </div>

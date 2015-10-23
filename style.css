@@ -22,7 +22,7 @@ a:hover {
 }
 
 .rounded{
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 section {
@@ -103,10 +103,24 @@ fieldset {
 	display: none;
 }
 
+.input{
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+}
+/*
 .visible {
 	display: block;
+}*/
+
+.add {
+	display: block;
+	text-align: center;
 }
 
+#getMoreSongs {
+	text-align: right;
+}
 
 
 
