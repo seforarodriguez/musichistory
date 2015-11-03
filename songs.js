@@ -1,57 +1,22 @@
 $(document).ready(function() {
 
-// var songs = [];
-
-
-// songs[songs.length] = "Legs > Z*ZTop - Eliminator";
-// songs[songs.length] = "The Logical Song > Supertr@amp -  Breakfast in America";
-// songs[songs.length] = "Another Brick in the Wall > Pink Floyd - The Wall";
-// songs[songs.length] = "Welco(me to the Jungle > Guns & Roses - Appetite for Destruction";
-// songs[songs.length] = "Ironi!c > Alanis Moris*ette - Jagged Little Pill";
-
-// console.log(songs);
-
-// //just a practice to add songs at the beggining and in the end.
-// songs.unshift("Be My Husband - Ed Sheeran - Don't");
-// songs.push("Bright - Echosmith - Bright");
-
-// console.log(songs);
-
-// var songElement = document.getElementById("song-list")
-
-//this for goes over each song and fixes the errors,
-// make them into a div each time so it looks like a list
-// for (i = 0;i < songs.length; i++) {
-// 	var songlist = songs[i];
-
-// 	characterRemoval = songlist.replace(/[@*(!]/g, "").replace(">", "-");
-// 	newsongs = characterRemoval;	
-// 	console.log(newsongs);
-
-// 	var code = "<h4>" + newsongs + "</h4>";
-
-//  songElement.innerHTML= songElement.innerHTML + code;
-
-
-// }
-
 // Link to hide and show the add music box
-$("#addMusicLink").click(function(event){
-	event.preventDefault();
-	console.log("happy")
-	$("#AddBox").show();
-	$("#blue-box").hide();
-	$("#yellow-box").hide();
-})
+	$("#addMusicLink").click(function(event){
+		event.preventDefault();
+		console.log("happy")
+			$("#AddBox").show();
+			$("#blue-box").hide();
+			$("#yellow-box").hide();
+	})
 
 //This link brings me back to the main view
-$("#returnList").click(function(event) {
-	event.preventDefault();
-	console.log("Doing Something");
-	$("#AddBox").hide();
-	$("#blue-box").show();
-	$("#yellow-box").show();
- });
+	$("#returnList").click(function(event) {
+		event.preventDefault();
+		console.log("Doing Something");
+			$("#AddBox").hide();
+			$("#blue-box").show();
+			$("#yellow-box").show();
+	 });
 
 
 
@@ -81,14 +46,14 @@ $("#returnList").click(function(event) {
 
 //This deletes ONLY the song box because of the parentNode
 	$("body").click(function(event) {
-  console.log(event);
+  		console.log(event);
 
-  	 if (event.target.className === "deleteLine") {
-    	event.target.parentNode.remove();
+	  	if (event.target.className === "deleteLine") {
+	    	event.target.parentNode.remove();
 
-    	console.log("anything")
-	};
-  });
+	    	console.log("anything")
+		};
+  	});
 
 
 	//This deletes everything from the box
@@ -97,30 +62,29 @@ $("#returnList").click(function(event) {
 		$("#song-list").html("<div>" + " " + "</div>");
 	});
 
-//Adding the extra Songs button.
-
-// $.ajax({
-//    url: "ver5MoreSongs.json"
-//  }).done(executeSongs);
+		//Adding the extra Songs button.
 
 	
 	$("body").on('click', '#getMoreSongs',function() {
-		// event.preventDefault();
-		 
+		
 		 $.ajax({url: "ver5MoreSongs.json"}).done(executeSongs);
 	})
 
 
 // This allows me to add a new song to my array or whatever**************** NOT WORKING
-// $(".add").click(function(event){
-// 	executeSongs(songList)
-// 		var formatforSongs = $(".enterName") + "-" + $(".enterArtist") + "-" + $(".enterAlbum") + "-" + $(".enterGenre");
-// 		var formatAddSongName = "<h4>" + formatforSongs + "</h4>";
-// 		songElement.innerHTML += formatAddSongName;
-// });
+	$(".add").click(function(event){
+
+		var codeForTitle = "<h1>" + currentSong.title + "</h1>";
+	        var codeForArtist = "<p>Performed by " + currentSong.artist + "</p>";
+	        var codeForAlbum = "<p>Album " + currentSong.album + "</p>" + "<button class='deleteLine'>Delete</button>";
+	        var codeForAllParts = "<div>" + codeForTitle + codeForArtist + codeForAlbum + "</div>";
+	        
+	});
 
 
-
+var formatforSongs = $(".enterName") + "-" + $(".enterArtist") + "-" + $(".enterAlbum") + "-" + $(".enterGenre");
+			var formatAddSongName = "<h4>" + formatforSongs + "</h4>";
+			songElement.innerHTML += formatAddSongName;
 
 
 
