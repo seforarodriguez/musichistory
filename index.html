@@ -4,24 +4,43 @@
 <head>
   <meta charset="utf-8">
   <title>NSS Starter Kit</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+ <link rel="stylesheet" type="text/css" href="../lib/bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+ <link rel="stylesheet" type="text/css" href="../styles/main.css">
 </head>
 
 <body>
 
 <div id="everything">
 <header>
-<nav>
-	<div id="container" class="rounded">
-		<a href="#">View Music</a>
-		<a href="#" id="returnList">List Music</a>
-		<a href="#" id="addMusicLink">Add Music</a>
-		<a href="#">Profile</a>
-	</div>	
-</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand">Sefora's Playlist</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" id="returnList">View Music</a></li>
+	        <li><a href="#" id="addMusicLink">Add Music</a></li>
+	        <li><a href="#">Profile</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 </header>
+
+<!-- This is the adding box that is outside of the container fluid -->
 <section>
-	<div class="hidden" id="AddBox">
+	<div class="myHidden" id="AddBox">
 		
 		<input type="text" class="enterName input" placeholder="Enter Song Name Here">
 			
@@ -35,69 +54,106 @@
 	</div>
 </section>
 
-<article id="blue-box" class="rounded">
-	<div>
-	<label for="songlength" class="header">Song Length</label>
-	</br>
-	<input type="range" name="songlength" min="1:00" max="4:30">
-	</br>
-	<label for="artist" class="header">Artist</label>
-	</br>
-	<select id="artist" name="choose-artist">
-		<option>Options</option>
-		<option>Ellie Golding</option>
-		<option>Justin Timberlake</option>
-		<option>Skrillex</option>
-		<option>Michael Buble</option>
-	</select>
-	</br>
-	<label for="album" class="header">Album</label>
-	</br>
-	<select id="choose-artist" name="artist">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-xs-12">
+					<fieldset id="blue-box" class="rounded">
+						<div>
+						<label for="songlength" class="header">Song Length</label>
+						<input type="range" name="songlength" min="1:00" max="4:30">
+						</div>
 
-		<option>Options</option>
-		<option>Ligts</option>
-		<option>Mirrors</option>
-		<option>Justin's Album</option>
-		<option>Michael Buble</option>
-	</div>	
-	</select>
-	</br>
-	<label for="genre" class="header">Genre</label>
-	</br>
-	<fieldset>
-		<div id="left">
-			<p><input type="checkbox" name="rock" value="a">Rock</p>	
-			<p><input type="checkbox" name="pop" value="b">Pop</p>
-			<p><input type="checkbox" name="blues" value="c">Blues</p>
-		</div>
-		<div id="right">
-			<p><input type="checkbox" name="clasical" value="d">Classical</p>
-			<p><input type="checkbox" name="jazz" value="e">Jazz</p>
-			<p><input type="checkbox" name="hiphop" value="f">Hip Hop</p>
-		</div>
-		<div id="filter-button">
-			<input type="submit" class="buttonFilter" value="Filter">
-			<button class="deleteAll">Delete All</button>
+						<!-- this is the title of the drop box -->
+						<div>
+						<label for="artist" class="header">Artist</label>
+						</div>
+
+						<!-- this is the dropbox for artists -->
+						<div class="dropdown" id="choose-artist">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Dropdown
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">--</a></li>
+						    <li><a href="#">Ed Sheeran</a></li>
+						    <li><a href="#">Panic! At the Disco</a></li>
+						    <li><a href="#">Randy Newman</a></li>
+						  </ul>
+						</div>
+
+						<!-- this the title of the dropbox  -->
+						</br>
+						<label for="album" class="header">Album</label>
+						</br>
+						
+						<!-- actual droppbox of the songs -->
+						<div class="dropdown" id="choose-artist">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">--</a></li>
+						    <li><a href="#">Be My Husband</a></li>
+						    <li><a href="#">I Write Sins not Tragedies</a></li>
+						    <li><a href="#">You got a Friend in Me</a></li>
+						  </ul>
+						</div>
+						
+						</br>
+						<label for="genre" class="header">Genre</label>
+						</br>
+						<fieldset>
+							<div class="container-fluid">
+								<div class="col-md-6">
+									<p><input type="checkbox" name="rock" value="a">Rock</p>	
+									<p><input type="checkbox" name="pop" value="b">Pop</p>
+									<p><input type="checkbox" name="blues" value="c">Blues</p>
+								</div>
+								<div class="col-md-6">
+									<p><input type="checkbox" name="clasical" value="d">Classical</p>
+									<p><input type="checkbox" name="jazz" value="e">Jazz</p>
+									<p><input type="checkbox" name="hiphop" value="f">Hip Hop</p>
+								</div>
+							</div>
+
+							<div id="filter-button" class="btn-group btn-group-justified" role="group" aria-label="...">
+							  <div class="btn-group" role="group">
+							    <button type="button" class="btn btn-default buttonFilter">Filter</button>
+							  </div>
+							  <div class="btn-group" role="group">
+							    <button type="button" class="btn btn-default deleteAll">Delete All</button>
+							  </div>
+							</div>
+							
+						</fieldset>
+					</fieldset>
+				</div>
+			</div>
 		</div>
 		
 
-	</fieldset>
-</article>
 
-<fieldset id="yellow-box" class="rounded">
-	<div id="content">
-		<div id="song-list">
-		
+		<div class="col-md-8">
+			<fieldset id="yellow-box" class="rounded">
+				<div id="content">
+					<div id="song-list">
+					
+					</div>
+
+					<button id="getMoreSongs">More</button>
+
+				
+				</div>
+			</fieldset>
 		</div>
-
-		<button id="getMoreSongs">More</button>
-
 	</div>
-</fieldset>
 </div>
+	
+	<script data-main="./javascripts/entry.js" src="./lib/bower_components/requirejs/require.js"></script>
 
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="songs.js"></script>
 </body>
 </html>

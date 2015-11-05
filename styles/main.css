@@ -1,0 +1,102 @@
+body {
+  padding-top: 70px;
+  background-color: #B7CEEC; }
+
+a {
+  padding-right: 10px;
+  color: #FFFFFF; }
+
+a:link {
+  text-decoration: none;
+  font-family: Verdana; }
+
+a:hover {
+  color: #000000; }
+
+.rounded {
+  border-radius: 2px; }
+
+section {
+  background-color: #43C6DB; }
+
+div > input {
+  display: block; }
+
+#blue-box {
+  background-color: #43C6DB;
+  border: 1px solid black;
+  padding: 50px 5px 60px;
+  height: 75%;
+  margin-top: 15px; }
+
+.addbox {
+  background-color: #43C6DB;
+  margin-top: 20px;
+  border-radius: 30px; }
+
+#yellow-box {
+  background-color: #1C9FB3;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  height: 75%; }
+
+h4 {
+  color: #FFFFFF; }
+
+.navbar-default {
+  color: #FFFFFF;
+  background-color: #DB5844;
+  border: 1px solid black;
+  text-align: center; }
+
+.nav-bar {
+  text-align: center; }
+
+div > ul > li {
+  list-style-type: none; }
+
+li {
+  display: inline;
+  border-right: 2px solid black;
+  padding: 5px; }
+
+#everything {
+  width: 900px;
+  margin: 0 auto; }
+
+fieldset {
+  border: 0px; }
+
+#filter-button {
+  text-align: center; }
+
+.buttonFilter {
+  text-align: center; }
+
+.myHidden {
+  display: none; }
+
+.input {
+  padding: 10px;
+  margin: 10px;
+  display: inline-block; }
+
+.visible {
+  display: block; }
+
+.add {
+  display: block;
+  text-align: center; }
+
+#getMoreSongs {
+  text-align: right; }
+
+#filter-button {
+  text-align: center; }
+
+.col-xs-12 {
+  display: block;
+  height: 50%; }
+
+/*# sourceMappingURL=main.css.map */
