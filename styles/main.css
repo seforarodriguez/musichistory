@@ -16,38 +16,37 @@ a:hover {
 .rounded {
   border-radius: 2px; }
 
-section {
-  background-color: #43C6DB; }
-
 div > input {
   display: block; }
 
 #blue-box {
-  background-color: #43C6DB;
-  border: 1px solid black;
+  background-color: rgba(159, 213, 224, 0.6);
+  border: 1px solid #FFFFFF;
+  margin-top: 5px;
   padding: 50px 5px 60px;
-  height: 75%;
-  margin-top: 15px; }
+  border-radius: 5px; }
 
-.addbox {
-  background-color: #43C6DB;
-  margin-top: 20px;
+.prettylooking {
+  background-color: rgba(159, 221, 85, 0.2);
+  border: 1px solid #FFFFFF;
   border-radius: 30px; }
 
+.centered {
+  text-align: center; }
+
 #yellow-box {
-  background-color: #1C9FB3;
-  margin-top: 20px;
-  border: 1px solid black;
+  background-color: rgba(159, 221, 85, 0.2);
+  margin-top: 4px;
+  border: 1px solid #FFFFFF;
   padding: 10px;
-  height: 75%; }
+  border-radius: 5px; }
 
 h4 {
   color: #FFFFFF; }
 
 .navbar-default {
   color: #FFFFFF;
-  background-color: #DB5844;
-  border: 1px solid black;
+  border: 1px solid #FFFFFF;
   text-align: center; }
 
 .nav-bar {
@@ -58,11 +57,9 @@ div > ul > li {
 
 li {
   display: inline;
-  border-right: 2px solid black;
   padding: 5px; }
 
 #everything {
-  width: 900px;
   margin: 0 auto; }
 
 fieldset {
@@ -86,11 +83,11 @@ fieldset {
   display: block; }
 
 .add {
-  display: block;
+  display: inline;
   text-align: center; }
 
 #getMoreSongs {
-  text-align: right; }
+  float: right; }
 
 #filter-button {
   text-align: center; }

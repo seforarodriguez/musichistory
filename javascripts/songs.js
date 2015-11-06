@@ -1,6 +1,24 @@
-define(["jquery", "populate-songs", "get-more-songs", "execute-songs"], function($,populateSongs,getMoreSongs, songsFunction) {
+define(["jquery", "populate-songs", "get-more-songs", "execute-songs", "hbs"], 
+	function($, populateSongs,getMoreSongs, songsFunction, handlebar) {
+	
+	populateSongs.getMeSomeData(function(songsObject){
+		require(['hbs!../templates/songs'], function(songtemplate) {
+		$("#song-list").append(songtemplate(songsObject));
+	});
+});
 
- 
+	$("body").on('click', '#getMoreSongs',function() {
+		getMoreSongs.getMeSomeData(function(songs){
+			require(['hbs!../templates/songs'], function(songtemplate) {
+			$("#song-list").append(songtemplate(songs));		
+		});
+	});
+});
+
+
+// populateSongs.getMeSomeData(function(getSomeData) {
+//     console.log("getSomeData", getSomeData);
+//   });
 
 // Link to hide and show the add music box
 	$("#addMusicLink").click(function(event){
@@ -25,7 +43,7 @@ define(["jquery", "populate-songs", "get-more-songs", "execute-songs"], function
 	$("body").click(function(event) {
   		console.log(event);
 
-	  	if (event.target.className === "deleteLine") {
+	  	if (event.target.className === "btn btn-default deleteLine") {
 	    	event.target.parentNode.remove();
 
 	    	console.log("anything");
@@ -46,7 +64,7 @@ define(["jquery", "populate-songs", "get-more-songs", "execute-songs"], function
 
 		var codeForTitle = "<h1>" + $(".enterName").val() + "</h1>";
         var codeForArtist = "<p>Performed by " + $(".enterArtist").val() + "</p>";
-        var codeForAlbum = "<p>Album " + $(".enterAlbum").val() + "</p>" + "<button class='deleteLine'>Delete</button>";
+        var codeForAlbum = "<p>Album " + $(".enterAlbum").val() + "</p>" + "<button class='btn btn-default deleteLine'>Delete</button>";
         var codeForAllParts = "<div>" + codeForTitle + codeForArtist + codeForAlbum + "</div>";
         
 		$("#song-list").append(codeForAllParts);

@@ -40,7 +40,8 @@
 
 <!-- This is the adding box that is outside of the container fluid -->
 <section>
-	<div class="myHidden" id="AddBox">
+	<div class="myHidden prettylooking" id="AddBox">
+		<div class="centered">
 		
 		<input type="text" class="enterName input" placeholder="Enter Song Name Here">
 			
@@ -50,57 +51,61 @@
 		<input type="text" class="enterAlbum input" placeholder="Enter Song Album">
 			
 		<input type="text" class="enterGenre input" placeholder="Enter Song Genre">
-			<button value="Add" class="add">Add</button>
+			<button value="Add" class="add btn btn-default">Add</button>
+		</div>
 	</div>
 </section>
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="row">
-				<div class="col-xs-12">
+			<!-- <div class="row">
+				<div class="col-xs-12"> -->
 					<fieldset id="blue-box" class="rounded">
 						<div>
 						<label for="songlength" class="header">Song Length</label>
 						<input type="range" name="songlength" min="1:00" max="4:30">
 						</div>
 
-						<!-- this is the title of the drop box -->
-						<div>
-						<label for="artist" class="header">Artist</label>
-						</div>
+						<div class="container-fluid">  <!-- This is containing the artist and song dropdown -->
+							<div class="row">
+								<!-- this is the title of the drop box -->
+								<div class="col-sm-6">
+									<label for="artist" class="header">Artist</label>
+									
 
-						<!-- this is the dropbox for artists -->
-						<div class="dropdown" id="choose-artist">
-						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						    Dropdown
-						    <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						    <li><a href="#">--</a></li>
-						    <li><a href="#">Ed Sheeran</a></li>
-						    <li><a href="#">Panic! At the Disco</a></li>
-						    <li><a href="#">Randy Newman</a></li>
-						  </ul>
-						</div>
+									<!-- this is the dropbox for artists -->
+									<div class="dropdown" id="choose-artist">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose an Artist
+									    
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									    <li><a href="#">Ed Sheeran</a></li>
+									    <li><a href="#">Panic! At the Disco</a></li>
+									    <li><a href="#">Randy Newman</a></li>
+									  </ul>
+									</div>
+								</div>
 
-						<!-- this the title of the dropbox  -->
-						</br>
-						<label for="album" class="header">Album</label>
-						</br>
-						
-						<!-- actual droppbox of the songs -->
-						<div class="dropdown" id="choose-artist">
-						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						    
-						    <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						    <li><a href="#">--</a></li>
-						    <li><a href="#">Be My Husband</a></li>
-						    <li><a href="#">I Write Sins not Tragedies</a></li>
-						    <li><a href="#">You got a Friend in Me</a></li>
-						  </ul>
+								<div class="col-sm-6">
+									<!-- this the title of the dropbox  -->
+									<label for="album" class="header">Album</label>
+									
+									<!-- actual droppbox of the songs -->
+									<div class="dropdown" id="choose-artist">
+									  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose a Song
+									    
+									    <span class="caret"></span>
+									  </button>
+									  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									    <li><a href="#">Be My Husband</a></li>
+									    <li><a href="#">I Write Sins not Tragedies</a></li>
+									    <li><a href="#">You got a Friend in Me</a></li>
+									  </ul>
+									</div>
+								</div>
+							</div>
 						</div>
 						
 						</br>
@@ -108,16 +113,18 @@
 						</br>
 						<fieldset>
 							<div class="container-fluid">
-								<div class="col-md-6">
-									<p><input type="checkbox" name="rock" value="a">Rock</p>	
-									<p><input type="checkbox" name="pop" value="b">Pop</p>
-									<p><input type="checkbox" name="blues" value="c">Blues</p>
-								</div>
-								<div class="col-md-6">
-									<p><input type="checkbox" name="clasical" value="d">Classical</p>
-									<p><input type="checkbox" name="jazz" value="e">Jazz</p>
-									<p><input type="checkbox" name="hiphop" value="f">Hip Hop</p>
-								</div>
+								<div class="row">
+									<div class="col-xs-6">
+										<p><input type="checkbox" name="rock" value="a">Rock</p>	
+										<p><input type="checkbox" name="pop" value="b">Pop</p>
+										<p><input type="checkbox" name="blues" value="c">Blues</p>
+									</div>
+									<div class="col-xs-6">
+										<p><input type="checkbox" name="clasical" value="d">Classical</p>
+										<p><input type="checkbox" name="jazz" value="e">Jazz</p>
+										<p><input type="checkbox" name="hiphop" value="f">Hip Hop</p>
+									</div>
+								</div>	
 							</div>
 
 							<div id="filter-button" class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -131,8 +138,8 @@
 							
 						</fieldset>
 					</fieldset>
-				</div>
-			</div>
+				<!-- </div> -->
+			<!-- </div> -->
 		</div>
 		
 
@@ -144,7 +151,7 @@
 					
 					</div>
 
-					<button id="getMoreSongs">More</button>
+					<button id="getMoreSongs" class="btn btn-default">More</button>
 
 				
 				</div>
