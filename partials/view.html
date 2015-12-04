@@ -1,0 +1,68 @@
+
+<article id="blue-box" class="rounded" ng-controller="SongsCtrl">
+	<div>
+		<label for="songlength" class="header">Song Length</label>
+	
+		<input type="range" name="songlength" min="1:00" max="4:30">
+	</div>
+	<div>
+		<div>
+			Artist:
+			<select
+			  ng-model="ArtistDropDown"
+			  ng-options="value.artist for value in songs">
+			</select>
+		</div>
+	</div>	
+	
+	<div>
+		<div>
+			Album:
+			<select
+			  ng-model="AlbumDropDown"
+			  ng-options="value.album for value in songs">
+			</select>
+		</div>
+	</div>	
+	
+	<section>
+		<label for="genre" class="header">Genre</label>
+		
+		<fieldset>
+			<div id="left">
+				<p><input type="checkbox" name="rock" value="a">Rock</p>	
+				<p><input type="checkbox" name="pop" value="b">Pop</p>
+				<p><input type="checkbox" name="blues" value="c">Blues</p>
+			</div>
+			<div id="right">
+				<p><input type="checkbox" name="clasical" value="d">Classical</p>
+				<p><input type="checkbox" name="jazz" value="e">Jazz</p>
+				<p><input type="checkbox" name="hiphop" value="f">Hip Hop</p>
+			</div>
+			<div id="filter-button">
+				<input type="submit" class="buttonFilter" value="Filter">
+				<button class="deleteAll">Delete All</button>
+			</div>
+		</fieldset>
+	</section>
+</article>
+
+<section id="yellow-box" class="rounded">
+	<div id="content" ng-controller="SongsCtrl">
+		<div id="song-list" >
+	        <ul id="song-list" ng-repeat="key in songs">
+				<li> 
+					<h1>{{key.title}}</h1>
+					<p>Performed by {{key.artist}}</p>
+					<p>Album is {{key.album}}</p>
+
+					<button ng-click="killeachSong(key)">Delete</button>
+				 </li>
+			</ul>
+		</div>
+		<button ng-click="showMoreSongs()" id="getMoreSongs">More</button>
+	</div>
+</section>
+
+
+	

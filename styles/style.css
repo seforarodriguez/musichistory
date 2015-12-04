@@ -71,7 +71,6 @@ div > ul > li {
 
 li {
 	display: inline;
-	border-right: 2px solid black;
 	padding: 5px;
 }
 #everything {
